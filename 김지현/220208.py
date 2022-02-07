@@ -1,24 +1,23 @@
 ## 1110
 
-# num = 26 #int(input())
+# num = int(input())
 # cycle = 0
+# temp = 0
 # new_num = 0
 
-# while new_num!= num:
-    
-#     if num < 10:
+# while new_num != num or (num == 0 and cycle == 0):
+#     if num < 10 and cycle == 0:
 #         new_num = 11 * num
 #         cycle += 1
-#         new_num = new_num // 10 + new_num % 10
+#     elif cycle == 0:
+#         temp = num // 10 + num % 10
+#         new_num = num % 10 * 10 + temp % 10
 #         cycle += 1
 #     else:
-#         # 10보다 큰 경우, 각자리 수의 숫자를 더하고
-#         # 10으로 나눈 몫(십의 자리 수)과 10으로 나눈 나머지(일의 자리 수)
-#         new_num = num // 10 + num % 10
-#         new_num = num 
-#         if new_num > 10:
-#             # 10을 넘기면 다시 일의 자리 수만
-#             new_num = new_num % 10
+#         temp = new_num // 10 + new_num % 10
+#         new_num = new_num % 10 * 10 + temp % 10
+#         cycle += 1
+# print(cycle)
 
 
 ## 2941
@@ -36,3 +35,39 @@
 #         del a[n:n+2]
 
 # print(new, a)
+
+# a = input()
+# cro_cnt = 0
+# for idx in range(len(a)):
+#     if a[idx] == '=':
+#         if a[idx-1] in ('c', 's'):
+#             cro_cnt += 1
+#         elif a[idx-1] == 'z':
+#             if a[idx-2] == 'd':
+#                 cro_cnt += 2
+#             else:
+#                 cro_cnt += 1
+#     elif a[idx] == '-':
+#         if a[idx-1] in ('c', 'd'):
+#             cro_cnt += 1
+#     elif a[idx] == 'j':
+#         if a[idx-1] in ('l', 'n'):
+#             cro_cnt += 1
+#     else:
+#         cro_cnt += 0
+# print(len(a) - cro_cnt)
+
+
+### 1085번
+# x, y, w, h = map(int, input().split())
+# distance = [abs(h-y), abs(w-x), abs(x), abs(y)]
+# print(min(distance))
+
+
+### 3053번
+
+from math import pi
+r = int(input())
+
+print(pi * r**2)
+print(float(2 * r**2))
