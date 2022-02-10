@@ -36,26 +36,26 @@
 
 # print(new, a)
 
-# a = input()
-# cro_cnt = 0
-# for idx in range(len(a)):
-#     if a[idx] == '=':
-#         if a[idx-1] in ('c', 's'):
-#             cro_cnt += 1
-#         elif a[idx-1] == 'z':
-#             if a[idx-2] == 'd':
-#                 cro_cnt += 2
-#             else:
-#                 cro_cnt += 1
-#     elif a[idx] == '-':
-#         if a[idx-1] in ('c', 'd'):
-#             cro_cnt += 1
-#     elif a[idx] == 'j':
-#         if a[idx-1] in ('l', 'n'):
-#             cro_cnt += 1
-#     else:
-#         cro_cnt += 0
-# print(len(a) - cro_cnt)
+a = input()
+cro_cnt = 0
+for idx in range(len(a)):
+    if a[idx] == '=':
+        if a[idx-1] in ('c', 's'):
+            cro_cnt += 1
+        elif a[idx-1] == 'z':
+            if a[idx-2] == 'd':
+                cro_cnt += 2
+            else:
+                cro_cnt += 1
+    elif a[idx] == '-':
+        if a[idx-1] in ('c', 'd'):
+            cro_cnt += 1
+    elif a[idx] == 'j':
+        if a[idx-1] in ('l', 'n'):
+            cro_cnt += 1
+    else:
+        cro_cnt += 0
+print(len(a) - cro_cnt)
 
 
 ### 1085번
@@ -66,8 +66,8 @@
 
 ### 3053번
 
-from math import pi
-r = int(input())
+# from math import pi
+# r = int(input())
 
-print(pi * r**2)
-print(float(2 * r**2))
+# print(pi * r**2)
+# print(float(2 * r**2))
